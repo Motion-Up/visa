@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#server
+.vscode/
+bin/
+.DS_Store
+visa/static
+visa/media
+visa/gunicorn_config.py
