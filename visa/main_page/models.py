@@ -31,3 +31,17 @@ class Service(models.Model):
     class Meta:
         verbose_name = 'Услуга'
         verbose_name_plural = 'Услуги'
+
+
+class Client(models.Model):
+    name = models.CharField('Имя', max_length=200)
+    phone = models.CharField('Телефон', max_length=200)
+    email = models.EmailField('Почта')
+    created_date = models.DateTimeField('Дата публикации', auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Клиент'
+        verbose_name_plural = 'Клиенты'

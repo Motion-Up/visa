@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Article, Service
+from .models import Article, Service, Client
 
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -16,5 +16,12 @@ class ServiceAdmin(admin.ModelAdmin):
     list_filter = ('price', 'amount_of_days')
 
 
+class ClientAdmin(admin.ModelAdmin):
+    list_display = ('name', 'phone', 'email')
+    search_fields = ('name',)
+    list_filter = ('name',)
+
+
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Service, ServiceAdmin)
+admin.site.register(Client, ClientAdmin)
