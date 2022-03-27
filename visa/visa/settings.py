@@ -18,7 +18,10 @@ SECRET_KEY = os.getenv('TOKEN')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '80.78.251.43',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -123,3 +126,10 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'postmaster@sandboxd3d1ea751b8f42b395f3368371a3840c.mailgun.org'
 EMAIL_HOST_PASSWORD = os.getenv('PASSWORD')
 EMAIL_USE_TLS = True
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://visatobali.com*',
+    'http://visatobali.com',
+    'http://www.visatobali.com'
+]
