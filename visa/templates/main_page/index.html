@@ -18,11 +18,11 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Туристическая/Бизнес eVISA B211 на Бали</h1>
-        <p class="lead text-muted"> По данной визе вы можете прилететь на Бали в 2022 году, как с целью туризма, так и с бизнес целями.</p>
+        <h1 class="fw-light">Туристическая/Бизнес eVisa B211 на Бали</h1>
+        <p class="lead text-muted">По данной визе вы можете прилететь на Бали в 2022 году, как с целью туризма, так и с бизнес целями. Цены и условия получения данных виз абсолютно одинаковые.</p>
         <p>
-          <a href="#post_form" class="btn btn-primary my-2">Сделать визу</a>
-          <a href="https://t.me/visatobalii" class="btn btn-primary my-2">Написать в Telegram</a>
+          <a href="#post_form" class="btn btn-primary btn-lg my-2">Сделать визу</a>
+          <a href="https://t.me/visatobalii" class="btn btn-primary btn-lg my-2">Написать в Telegram</a>
         </p>
       </div>
     </div>
@@ -34,7 +34,7 @@
 
   <div class="album py-5 bg-light" id="article">
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">      
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">      
         {% for article in articles %}
           <div class="col">
             <div class="card shadow-sm">
@@ -42,16 +42,16 @@
   
               <div class="card-body">
                 <h5 class="card-title">{{ article.title }}</h5>
-                <p class="card-text">{{ article.text|truncatechars:80 }}</p>
+                <p class="card-text">{{ article.text|truncatechars:120 }}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Полная версия ...
+                      <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#article{{ article.pk }}">
+                        Читать полностью ...
                       </button>
 
                       <!-- Modal -->
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal fade" id="article{{ article.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -59,10 +59,10 @@
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                              {{ article.text }}
+                              {{ article.text|linebreaks }}
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Закрыть</button>
+                              <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal">Закрыть</button>
                             </div>
                           </div>
                         </div>
@@ -76,6 +76,7 @@
       </div>
     </div>
   </div>
+  <br><br>
 
 
 
@@ -101,12 +102,12 @@
 
               
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+              <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#service{{ service.pk }}">
                 Оформить
               </button>
 
               <!-- Modal -->
-              <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade" id="service{{ service.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -124,7 +125,7 @@
                         <input type="hidden" value="{{ service.title }}" name="service">
                     </div>
                     <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary" >Оформить</button>
+                      <button type="submit" class="btn btn-primary btn-lg" >Оформить</button>
                     </div>
                       </form>
                   </div>
@@ -137,7 +138,7 @@
         </div>
       {% endfor %}
     </div>
-
+    <br><br>
 
 
 
@@ -156,7 +157,9 @@
         </div>
         {% endfor %}
         <input type="hidden" value="простая заявка" name="service">
-      <button type="submit" class="btn btn-primary">Отправить</button>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="submit" class="btn btn-primary btn-lg center-block">Отправить</button>
+        </div>
       </form>
       <br><br>
     </div>

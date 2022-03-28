@@ -7,7 +7,7 @@ class ClientForm(forms.Form):
         max_length=200,
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form-control form-control-lg',
                 'placeholder': 'Введите имя',
             }
         )
@@ -17,7 +17,7 @@ class ClientForm(forms.Form):
         max_length=200,
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control ',
+                'class': 'form-control form-control-lg',
                 'placeholder': 'Введите телефон',
             }
         )
@@ -27,7 +27,7 @@ class ClientForm(forms.Form):
         max_length=200,
         widget=forms.EmailInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form-control form-control-lg',
                 'placeholder': 'Введите почту',
             }
         )
