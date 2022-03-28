@@ -10,7 +10,7 @@
  
   {% if success %}
   <div class="alert alert-success text-center" role="alert">
-    <strong>Заявка успешно отправлена</strong>
+    <strong>Заявка успешно отправлена, мы свяжемся с Вами в ближайшее время</strong>
   </div>
   {% endif %}
 
@@ -110,7 +110,7 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">{{ service.title }}</h5>
+                      <h5 class="modal-center" id="exampleModalLabel">{{ service.title }}</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -124,7 +124,7 @@
                         <input type="hidden" value="{{ service.title }}" name="service">
                     </div>
                     <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary" >Отправить</button>
+                      <button type="submit" class="btn btn-primary" >Оформить</button>
                     </div>
                       </form>
                   </div>

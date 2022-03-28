@@ -131,5 +131,8 @@ EMAIL_USE_TLS = True
 CSRF_TRUSTED_ORIGINS = [
     'http://visatobali.com*',
     'http://visatobali.com',
-    'http://www.visatobali.com'
+    'http://www.visatobali.com',
+    'https://visatobali.com*',
+    'https://visatobali.com',
+    'https://www.visatobali.com'
 ]
