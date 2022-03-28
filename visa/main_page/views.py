@@ -18,12 +18,13 @@ def index(request):
         name = request.POST['name']
         phone = request.POST['phone']
         email = request.POST['email']
+        service = request.POST['service']
         client = Client(name=name, phone=phone, email=email)
         client.save()
         context['success'] = True
         send_mail(
             'Новый клиент',
-            'Новый клиент: ' + name + '\n' + 'Телефон: ' + phone + '\n' + 'Почта: ' + email,
+            'Новый клиент: ' + name + '\n' + 'Телефон: ' + phone + '\n' + 'Почта: ' + email + '\n' + 'Услуга: ' + service, 
             'postmaster@sandboxd3d1ea751b8f42b395f3368371a3840c.mailgun.org',
             ['prdarishdery@gmail.com'],
         )

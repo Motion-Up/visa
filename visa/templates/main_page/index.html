@@ -98,7 +98,40 @@
             <div class="card-body">
               <h1 class="card-title pricing-card-title">${{ service.price }}</h1>
               <p>{{ service.text|linebreaks }}</p>
-              <button type="button" class="w-50 btn btn-lg btn-primary">Оформить</button>
+
+              
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+                Оформить
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">{{ service.title }}</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form method="post" action="{% url 'main_page:index' %}" class="col-lg-6 col-md-8 mx-auto">
+                        {% csrf_token %}
+                        {% for form in forms %}
+                        <div class="mb-3">
+                          {{ form }}
+                        </div>
+                        {% endfor %}
+                        <input type="hidden" value="{{ service.title }}" name="service">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary" >Отправить</button>
+                    </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -122,6 +155,7 @@
           {{ form }}
         </div>
         {% endfor %}
+        <input type="hidden" value="простая заявка" name="service">
       <button type="submit" class="btn btn-primary">Отправить</button>
       </form>
       <br><br>
