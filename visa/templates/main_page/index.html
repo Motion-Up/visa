@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load thumbnail %}
+{% load i18n %}
 
 {% block title %}
-  Виза Бали
+  {% trans 'Виза Бали' %}
 {% endblock %}
 
 {% block content %}
 <div class="bg-light"> <!-- отвечает за весь серый цвет -->
+
  
   {% if success %}
   <div class="alert alert-success text-center" role="alert">
-    <strong>Заявка успешно отправлена, мы свяжемся с Вами в ближайшее время</strong>
+    <strong>{% trans 'Заявка успешно отправлена, мы свяжемся с Вами в ближайшее время' %}</strong>
   </div>
   {% endif %}
 
@@ -19,11 +21,11 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Туристическая/Бизнес eVisa B211 на Бали</h1>
-        <p class="lead text-muted">По данной визе вы можете прилететь на Бали в 2022 году, как с целью туризма, так и с бизнес целями. Цены и условия получения данных виз абсолютно одинаковые.</p>
+        <h1 class="fw-light">{% trans 'Туристическая/Бизнес eVisa B211 на Бали' %}</h1>
+        <p class="lead text-muted">{% trans 'По данной визе вы можете прилететь на Бали в 2022 году, как с целью туризма, так и с бизнес целями. Цены и условия получения данных виз абсолютно одинаковые' %}.</p>
         <p>
-          <a href="#post_form" class="btn btn-primary btn-lg my-2">Сделать визу</a>
-          <a href="https://t.me/visatobalii" class="btn btn-primary btn-lg my-2">Написать в Telegram</a>
+          <a href="#post_form" class="btn btn-primary btn-lg my-2">{% trans 'Сделать визу' %}</a>
+          <a href="https://t.me/visatobalii" class="btn btn-primary btn-lg my-2">{% trans 'Написать в Telegram' %}</a>
         </p>
       </div>
     </div>
@@ -49,7 +51,7 @@
                   <div class="btn-group">
                     <!-- Button trigger modal -->
                       <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#article{{ article.pk }}">
-                        Читать полностью ...
+                        {% trans 'Читать полностью ...' %}
                       </button>
 
                       <!-- Modal -->
@@ -64,7 +66,7 @@
                               {{ article.text|linebreaks }}
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal">Закрыть</button>
+                              <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal">{% trans 'Закрыть' %}</button>
                             </div>
                           </div>
                         </div>
@@ -87,7 +89,7 @@
 
     <div class="row py-lg-5" id="price">
         <h2 class="text-center">
-        Выбрать тариф
+        {% trans 'Выбрать тариф' %}
         </h2>
     </div>
     <div class="center row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -96,7 +98,7 @@
           <div class="card mb-4 rounded-3 shadow-sm">
             <div class="card-header py-3 w-100">
               <h4 class="my-0 fw-normal">{{ service.title }}</h4>
-              <small class="text-secondary">Срок выдачи визы - до {{service.amount_of_days}} рабочих дней</small>
+              <small class="text-secondary">{% trans 'Срок выдачи визы - до ' %} {{service.amount_of_days}} {% trans ' рабочих дней' %} </small>
             </div>
             <div class="card-body">
               <h1 class="card-title pricing-card-title">${{ service.price }}</h1>
@@ -105,7 +107,7 @@
               
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#service{{ service.pk }}">
-                Оформить
+                {% trans 'Оформить' %} 
               </button>
 
               <!-- Modal -->
@@ -127,7 +129,7 @@
                         <input type="hidden" value="{{ service.title }}" name="service">
                     </div>
                     <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary btn-lg" >Оформить</button>
+                      <button type="submit" class="btn btn-primary btn-lg" >{% trans 'Оформить' %}</button>
                     </div>
                       </form>
                   </div>
@@ -146,7 +148,7 @@
 
     <div class="row py-lg-5" id="post_form">
         <h2 class="text-center">
-        Оставить заявку
+        {% trans 'Оставить заявку' %}
         </h2>
     </div>
 
@@ -160,7 +162,7 @@
         {% endfor %}
         <input type="hidden" value="простая заявка" name="service">
         <div class="d-grid gap-2 col-6 mx-auto">
-          <button type="submit" class="btn btn-primary btn-lg center-block">Отправить</button>
+          <button type="submit" class="btn btn-primary btn-lg center-block">{% trans 'Отправить' %}</button>
         </div>
       </form>
       <br><br>

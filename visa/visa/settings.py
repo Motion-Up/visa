@@ -1,6 +1,7 @@
 import os
 
 from dotenv import load_dotenv
+from django.utils.translation import gettext_lazy as _
 
 
 load_dotenv()
@@ -34,12 +35,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_page.apps.MainPageConfig',
+    'parler',
     'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -137,3 +140,26 @@ CSRF_TRUSTED_ORIGINS = [
     'https://visatobali.com',
     'https://www.visatobali.com'
 ]
+
+LANGUAGES = [
+    ('ru', _('Russian')),
+    ('en', _('English')),     
+]
+
+LANGUAGE_SESSION_KEY = 'session_language_appname'
+LANGUAGE_COOKIE_NAME = 'cookie_language_appname'
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'main_page/locale')
+]
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en',}, # English
+        {'code': 'ru',}, # Russian
+    ),
+    'default': {
+        'fallbacks': ['ru'],
+        'hide_untranslated': False,
+    }
+}

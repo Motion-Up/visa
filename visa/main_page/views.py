@@ -1,5 +1,7 @@
+from fnmatch import translate
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.utils.translation import gettext as _
 
 from .models import Article, Service, Client
 from .forms import ClientForm
@@ -30,6 +32,16 @@ def index(request):
         )
         return render(request, 'main_page/index.html', context=context)
     return render(request, 'main_page/index.html', context=context)
+
+
+#def translate(language):
+#    cur_language = get_language()
+#    try:
+#        activate(language)
+#        text = gettext('Привет')
+#    finally:
+#        activate(cur_language)
+#        return text
 
 
 def site_map(request):

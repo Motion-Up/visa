@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-11 11:44+0000\n"
+"PO-Revision-Date: 2022-04-12 11:31+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: main_page/forms.py:11
+msgid "Введите имя"
+msgstr "Enter your name"
+
+#: main_page/forms.py:21
+msgid "Введите телефон"
+msgstr "Enter your phone number"
+
+#: main_page/forms.py:31
+msgid "Введите почту"
+msgstr "Enter your email"
+
+#: templates/base.html:8
+msgid ""
+"как добраться до бали, как попасть на бали, виза на бали, как получить визу "
+"на бали, как сделать визу на бали, как добраться до бали 2022, как попасть "
+"на бали 2022, виза на бали 2022, как получить визу на бали 2022, как сделать "
+"визу на бали 2022"
+msgstr "hod dkflsd sdfklsd sdkflsdfl"
+
+#: templates/includes/footer.html:6 templates/includes/header.html:13
+msgid "Контакты"
+msgstr "Contacts"
+
+#: templates/includes/header.html:10
+msgid "Главная"
+msgstr "Main"
+
+#: templates/includes/header.html:11
+msgid "Как попасть на Бали"
+msgstr "How to go to Bali?"
+
+#: templates/includes/header.html:12
+msgid "Цены"
+msgstr "Prices"
+
+#: templates/includes/header.html:18
+msgid "Язык"
+msgstr "Language"
+
+#: templates/main_page/index.html:7
+#, fuzzy
+msgid "Виза Бали"
+msgstr "Visa Bali"
+
+#: templates/main_page/index.html:16
+msgid "Заявка успешно отправлена, мы свяжемся с Вами в ближайшее время"
+msgstr "Success! We will contact with you soon!"
+
+#: templates/main_page/index.html:24
+msgid "Туристическая/Бизнес eVisa B211 на Бали"
+msgstr "Tourist/Business eVisa B211 to Bali"
+
+#: templates/main_page/index.html:25
+msgid ""
+"По данной визе вы можете прилететь на Бали в 2022 году, как с целью туризма, "
+"так и с бизнес целями. Цены и условия получения данных виз абсолютно "
+"одинаковые"
+msgstr ""
+"With this visa, you can fly to Bali in 2022, both for tourism and business "
+"purposes. Prices and conditions for obtaining these visas are absolutely the "
+"same"
+
+#: templates/main_page/index.html:27
+msgid "Сделать визу"
+msgstr "Order a visa"
+
+#: templates/main_page/index.html:28
+msgid "Написать в Telegram"
+msgstr "Text to Telegram"
+
+#: templates/main_page/index.html:54
+msgid "Читать полностью ..."
+msgstr "Read completely ..."
+
+#: templates/main_page/index.html:69
+msgid "Закрыть"
+msgstr "Close"
+
+#: templates/main_page/index.html:92
+msgid "Выбрать тариф"
+msgstr "Chose a tariff"
+
+#: templates/main_page/index.html:101
+msgid "Срок выдачи визы - до "
+msgstr "Visa issuance period - up to"
+
+#: templates/main_page/index.html:101
+msgid " рабочих дней"
+msgstr "working days"
+
+#: templates/main_page/index.html:110 templates/main_page/index.html:132
+msgid "Оформить"
+msgstr "Order a visa"
+
+#: templates/main_page/index.html:151
+msgid "Оставить заявку"
+msgstr "Submit your application"
+
+#: templates/main_page/index.html:165
+msgid "Отправить"
+msgstr "Send"
+
+#: visa/settings.py:145
+msgid "Russian"
+msgstr "Russian"
+
+#: visa/settings.py:146
+msgid "English"
+msgstr "English"

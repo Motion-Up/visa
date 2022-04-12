@@ -1,5 +1,5 @@
 from django import forms
-
+from django.utils.translation import gettext_lazy as _
 
 class ClientForm(forms.Form):
     name = forms.CharField(
@@ -8,7 +8,7 @@ class ClientForm(forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class': 'form-control form-control-lg',
-                'placeholder': 'Введите имя',
+                'placeholder': _('Введите имя'),
             }
         )
     )
@@ -18,7 +18,7 @@ class ClientForm(forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class': 'form-control form-control-lg',
-                'placeholder': 'Введите телефон',
+                'placeholder': _('Введите телефон'),
             }
         )
     )
@@ -28,7 +28,7 @@ class ClientForm(forms.Form):
         widget=forms.EmailInput(
             attrs={
                 'class': 'form-control form-control-lg',
-                'placeholder': 'Введите почту',
+                'placeholder': _('Введите почту'),
             }
         )
     )
