@@ -40,8 +40,8 @@ msgstr "how to go to bali, visa bali, bali visa, how to go to bali 2022, "
 "visas to bali, visa to bali, visa in bali, visa on bali , visa to bali 2022, "
 "visa bali 2022, bali visa 2022, how to get visa to bali, bali business visa, "
 "bali visa on arrival 2022, bali entry requirements covid, "
-"bali entry requirements, bali quarantine rules, " 
-"do you have vaccinated to go to bali, "
+"bali entry requirements, bali quarantine rules, travel to bali, " 
+"do you have vaccinated to go to bali, visit to bali, "
 "do you need to be vaccinated to go to bali, bali holidays"
 
 #: templates/includes/footer.html:6 templates/includes/header.html:13
@@ -96,7 +96,7 @@ msgstr "Text to Telegram"
 
 #: templates/main_page/index.html:54
 msgid "Читать полностью ..."
-msgstr "Read completely ..."
+msgstr "Read more ..."
 
 #: templates/main_page/index.html:69
 msgid "Закрыть"
