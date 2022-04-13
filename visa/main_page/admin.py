@@ -18,7 +18,7 @@ from .models import Article, Service, Client
 #
 #
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ('name', 'phone', 'email')
+    list_display = ('name', 'phone', 'email', 'created_date')
     search_fields = ('name',)
     list_filter = ('name',)
 
