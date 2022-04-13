@@ -34,15 +34,5 @@ def index(request):
     return render(request, 'main_page/index.html', context=context)
 
 
-#def translate(language):
-#    cur_language = get_language()
-#    try:
-#        activate(language)
-#        text = gettext('Привет')
-#    finally:
-#        activate(cur_language)
-#        return text
-
-
 def site_map(request):
     return render(request, 'main_page/sitemap.xml', content_type='text/xml')

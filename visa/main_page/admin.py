@@ -17,12 +17,12 @@ from .models import Article, Service, Client
 #    list_filter = ('price', 'amount_of_days')
 #
 #
-#class ClientAdmin(admin.ModelAdmin):
-#    list_display = ('name', 'phone', 'email')
-#    search_fields = ('name',)
-#    list_filter = ('name',)
-#
-#
+class ClientAdmin(admin.ModelAdmin):
+    list_display = ('name', 'phone', 'email')
+    search_fields = ('name',)
+    list_filter = ('name',)
+
+
 admin.site.register(Article, TranslatableAdmin)
 admin.site.register(Service, TranslatableAdmin)
-admin.site.register(Client, TranslatableAdmin)
+admin.site.register(Client, ClientAdmin)
