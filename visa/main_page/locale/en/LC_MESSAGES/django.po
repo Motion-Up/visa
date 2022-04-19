@@ -79,12 +79,10 @@ msgstr "Tourist/Business eVisa B211 to Bali"
 #: templates/main_page/index.html:25
 msgid ""
 "По данной визе вы можете прилететь на Бали в 2022 году, как с целью туризма, "
-"так и с бизнес целями. Цены и условия получения данных виз абсолютно "
-"одинаковые"
+"так и с бизнес целями."
 msgstr ""
 "With this visa, you can fly to Bali in 2022, both for tourism and business "
-"purposes. Prices and conditions for obtaining these visas are absolutely the "
-"same"
+"purposes."
 
 #: templates/main_page/index.html:27
 msgid "Сделать визу"
